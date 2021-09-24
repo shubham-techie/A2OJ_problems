@@ -12,22 +12,18 @@ int main(){
     cin>>n>>t;
 
     char* queue=new char[n];
-
     f(i,0,n)
         cin>>queue[i];
 
-    w(t){
-        f(i,0,n-1){
+    w(t)
+        f(i,0,n-1)
             if(queue[i]=='B' && queue[i+1]=='G'){
                 queue[i]='G';
                 queue[i+1]='B';
                 i++;
             }
-        }
-    }
 
     f(i,0,n)
         cout<<queue[i];
-
     re;
 }
