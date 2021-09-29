@@ -16,16 +16,32 @@ void solve(){
     int n,m;
     cin>>n>>m;
 
-    f(i,n+1,m+1)
-        if(prime(i) && i!=m){
-            cout<<"NO";
-            return;
-        }
-    
-    if(!prime(m))
+    if(!prime(m)){
         cout<<"NO";
-    else
-     cout<<"YES";   
+        return;
+    }
+    
+    f(i,n+1,m+1)
+        if(prime(i))
+            if(i==m){
+                cout<<"YES";
+                break;
+            }
+            else{
+                cout<<"NO";
+                break;
+            }
+ 
+    // f(i,n+1,m+1)
+    //     if(prime(i) && i!=m){
+    //         cout<<"NO";
+    //         return;
+    //     }
+    
+    // if(!prime(m))
+    //     cout<<"NO";
+    // else
+    //  cout<<"YES";   
 }
 
 int main(){
