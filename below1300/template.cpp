@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 #define f(i,a,b) for(int i=a;i<b;i++)
+#define ff(i,a,b) for(int i=a;i>=b;i--)
+#define fc(i,a,b,c) for(int i=a;i<b;i+=c)
 #define w(n) while(n--)
 #define fast ios_base::sync_with_stdio(false); cin.tie(NULL);
 #define test(t) int t; cin>>t; w(t)
@@ -7,7 +9,6 @@
 #define re return 0;
 
 using namespace std;
-
 typedef long long int ll;
 
 void solve(){
@@ -16,9 +17,7 @@ void solve(){
 
 int main(){
     fast;
-
-    test(t)
+    // test(t)
         solve();
-
-re;
+    re;
 }
