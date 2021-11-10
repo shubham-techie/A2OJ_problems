@@ -15,6 +15,7 @@ void solve()
     if(r<y)
         a-=x;
     
+    
     cout<<a<<"\n";
 }
 
