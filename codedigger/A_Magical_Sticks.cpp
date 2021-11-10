@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define test(t) int t; cin>>t; while(t--)
+#define test() int t; cin>>t; while(t--)
 
 typedef long long ll;
 using namespace std;
@@ -21,7 +21,7 @@ int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    test(t)
+    test()
         solve();
 
     return 0;
