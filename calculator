@@ -1,0 +1,75 @@
+#include<iostream>
+#include<limits>
+
+void ignoreLine(){
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+}
+
+using namespace std;
+
+int getInput(){
+
+    while(true){
+        cout<<"Enter value : ";
+        int x{};
+        cin>>x;
+
+        if(cin.fail())
+        {
+            cin.clear();
+            ignoreLine();
+            cerr<<"Oops, Enter valid input.\n";
+        }
+        else
+        {
+            ignoreLine();
+            return x;
+        }
+    }
+}
+
+char getOperator(){
+   while(true){
+       cout<<"Enter operator : ";
+       char c{};
+       cin>>c;
+
+       switch(c){
+           case '+':
+           case '-':
+           case '/':
+           case '*':
+                return c;
+           default: cerr<<"Oops, enter valid operator\n";
+       }
+   }
+}
+void printResult(int x, char operation, int y)
+{
+    switch (operation)
+    {
+    case '+':
+        std::cout << x << " + " << y << " is " << x + y << '\n';
+        break;
+    case '-':
+        std::cout << x << " - " << y << " is " << x - y << '\n';
+        break;
+    case '*':
+        std::cout << x << " * " << y << " is " << x * y << '\n';
+        break;
+    case '/':
+        std::cout << x << " / " << y << " is " << x / y << '\n';
+        break;
+    default: 
+        std::cerr << "Something went wrong: printResult() got an invalid operator.\n";
+    }
+}
+
+int main(){
+    int x{getInput()};
+    char oper{getOperator()};
+    int y{getInput()};
+
+    printResult(x,oper,y);
+
+}
